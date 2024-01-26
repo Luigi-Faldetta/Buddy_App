@@ -45,6 +45,44 @@ export default async function Home() {
             {hello ? hello.greeting : "Loading tRPC query..."}
           </p>
 
+          <form className="mt-6">
+            <div className="mb-4">
+              <label
+                htmlFor="email"
+                className="block text-sm font-semibold text-white"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                className="mt-2 block w-full rounded-md border bg-white px-4 py-2 text-gray-700 focus:border-gray-400 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40"
+              />
+            </div>
+            <div className="mb-2">
+              <label
+                htmlFor="password"
+                className="block text-sm font-semibold text-white"
+              >
+                Password
+              </label>
+              <input
+                type="password"
+                className="mt-2 block w-full rounded-md border bg-white px-4 py-2 text-gray-700 focus:border-gray-400 focus:outline-none focus:ring focus:ring-gray-300 focus:ring-opacity-40"
+              />
+            </div>
+            <Link
+              href="/signup"
+              className="text-xs text-blue-600 hover:underline"
+            >
+              Forgot your Password?
+            </Link>
+            <div className="mt-2">
+              <button className="w-full transform rounded-md bg-red-500 px-4 py-2 font-semibold tracking-wide text-white transition-colors duration-200 hover:bg-red-400 hover:text-slate-800 focus:bg-red-500 focus:outline-none">
+                Login
+              </button>
+            </div>
+          </form>
+
           <div className="flex flex-col items-center justify-center gap-4">
             <p className="text-center text-2xl text-white">
               {session && <span>Logged in as {session.user?.name}</span>}
