@@ -5,6 +5,8 @@ import { CreatePost } from "~/app/_components/create-post";
 import { getServerAuthSession } from "~/server/auth";
 import { api } from "~/trpc/server";
 
+import Navbar from "./_components/navbar";
+
 export default async function Home() {
   noStore();
   const hello = await api.post.hello.query({ text: "from BuddyApp" });
@@ -12,8 +14,9 @@ export default async function Home() {
   console.log("session:", session?.user);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center">
-      <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
+    <div className="h-screen overflow-hidden">
+      <Navbar />
+      <main className="flex min-h-screen flex-col items-center justify-center">
         <div className="flex flex-col items-center gap-2">
           <video
             autoPlay
@@ -40,8 +43,8 @@ export default async function Home() {
         </div>
 
         <CrudShowcase />
-      </div>
-    </main>
+      </main>
+    </div>
   );
 }
 
