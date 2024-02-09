@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { useState } from "react";
-import About from "./about/page";
 function Navbar() {
   const [showAbout, setShowAbout] = useState(false);
 
