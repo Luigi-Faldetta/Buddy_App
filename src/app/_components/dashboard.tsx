@@ -5,10 +5,7 @@ import { CreatePost } from "~/app/_components/create-post";
 import { getServerAuthSession } from "~/server/auth";
 import { api } from "~/trpc/server";
 
-import Navbar from "./_components/navbar";
-import PageContent from "./_components/page-content";
-
-export default async function Home() {
+export default async function Dashboard() {
   noStore();
   const hello = await api.post.hello.query({ text: "from BuddyApp" });
   const session = await getServerAuthSession();
@@ -16,7 +13,6 @@ export default async function Home() {
 
   return (
     <div className="h-screen overflow-hidden">
-      <PageContent></PageContent>
       <main className="flex min-h-screen flex-col items-center justify-center">
         <div className="flex flex-col items-center gap-2">
           <video

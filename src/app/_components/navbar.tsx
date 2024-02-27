@@ -1,12 +1,13 @@
 "use client";
 import React from "react";
-import { useState } from "react";
-function Navbar() {
-  const [showAbout, setShowAbout] = useState(false);
+import NavbarProps from "../interface";
+// import { useState } from "react";
+function Navbar({ showAbout, toggleAbout }: NavbarProps) {
+  // const [showAbout, setShowAbout] = useState(false);
 
-  const toggleAbout = () => {
-    setShowAbout(!showAbout);
-  };
+  // const toggleAbout = () => {
+  //   setShowAbout(!showAbout);
+  // };
   return (
     <div className="container mx-auto max-w-full">
       <div className="navbar w-full border-[2px] border-solid border-slate-300 bg-white bg-opacity-75 shadow-lg">
