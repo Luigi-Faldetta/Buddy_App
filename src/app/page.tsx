@@ -5,7 +5,6 @@ import { CreatePost } from "~/app/_components/create-post";
 import { getServerAuthSession } from "~/server/auth";
 import { api } from "~/trpc/server";
 
-import Navbar from "./_components/navbar";
 import PageContent from "./_components/page-content";
 
 export default async function Home() {
