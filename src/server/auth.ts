@@ -36,6 +36,7 @@ declare module "next-auth" {
  *
  * @see https://next-auth.js.org/configuration/options
  */
+
 export const authOptions: NextAuthOptions = {
   callbacks: {
     session: ({ session, user }) => ({
@@ -80,4 +81,12 @@ export const authOptions: NextAuthOptions = {
  *
  * @see https://next-auth.js.org/configuration/nextjs
  */
-export const getServerAuthSession = () => getServerSession(authOptions);
+// export const getServerAuthSession = () => getServerSession(authOptions);
+export const getServerAuthSession = async () => {
+  try {
+    return await getServerSession(authOptions);
+  } catch (error) {
+    console.error("getServerAuthSession error:", error);
+    throw error;
+  }
+};

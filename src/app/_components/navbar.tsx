@@ -8,6 +8,9 @@ function Navbar({ showAbout, toggleAbout }: NavbarProps) {
   // const toggleAbout = () => {
   //   setShowAbout(!showAbout);
   // };
+
+  console.log("NEXTAUTH_SECRET:", process.env.NEXTAUTH_SECRET);
+
   return (
     <div className="container mx-auto max-w-full">
       <div className="navbar w-full border-[2px] border-solid border-slate-300 bg-white bg-opacity-75 shadow-lg">

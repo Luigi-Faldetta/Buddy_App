@@ -10,7 +10,6 @@ export default async function Dashboard() {
   const hello = await api.post.hello.query({ text: "from BuddyApp" });
   const session = await getServerAuthSession();
   console.log("session:", session?.user);
-
   return (
     <div className="h-screen overflow-hidden">
       <main className="flex min-h-screen flex-col items-center justify-center">
