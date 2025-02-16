@@ -6,12 +6,12 @@ Buddy App is a web application where you can match with likeminded users to join
 
 Our app has been deployed on Vercel and you can now find it live at [buddy-app.es](https://www.buddy-app.es/)
 
-
 ## Work in Progress
 
 We are in the process of working on Buddy App and adding new features by the day. Next step is adding the search set up process, which, among other things, will involve using Google Places API.
 
-##Tech Stack
+## Tech Stack
+
 <div>
   <img width="50" src="https://github.com/marwin1991/profile-technology-icons/assets/25181517/1275d076-f047-432b-9084-308f88f8c176" alt="tRPC" title="tRPC"/>
 	<img width="50" src="https://user-images.githubusercontent.com/25181517/202896760-337261ed-ee92-4979-84c4-d4b829c7355d.png" alt="Tailwind CSS" title="Tailwind CSS"/>
